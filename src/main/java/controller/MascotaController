@@ -1,0 +1,20 @@
+package com.moduloveterinaria.controller;
+
+import com.moduloveterinaria.model.informacionMascota;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class MascotaController {
+
+    @GetMapping("/informacionMascota")
+    public informacionMascota getInformacionMascota() {
+        // Crear una nueva instancia de informacionMascota y asignar valores
+        informacionMascota mascotaInfo = new informacionMascota();
+        mascotaInfo.setNombre("Fido");
+        mascotaInfo.setTipo("Perro");
+        mascotaInfo.setEdad(3);
+        
+        return mascotaInfo;
+    }
+}
